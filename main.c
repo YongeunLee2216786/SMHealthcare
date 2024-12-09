@@ -24,8 +24,11 @@ int main() {
     HealthData health_data = {0};
     
     // Tocode: to read the list of the exercises and diets
+    FILE *fp;
+    fp=fopen("diets.txt", "w");
+    fp=fopen("exercises.txt", "w");
     
-
+    
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
     do {
     	if ( ){
@@ -67,7 +70,7 @@ int main() {
                 printf("[Error] Invalid option. \n");
                 printf("Please try again! \n");
         }
-    } while ( );
+    } while ( left_cal==0 );
 
     return 0;
 }

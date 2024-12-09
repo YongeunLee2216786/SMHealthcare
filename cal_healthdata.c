@@ -59,6 +59,7 @@ void saveData(const char* HEALTHFILEPATH, const HealthData* health_data) {
 
 void printHealthData(const HealthData* health_data) {
 	int i;
+	int left_cal, eat_cal, day_cal;
 	
 	// ToCode: to print out the saved history of exercises
 	printf("=========================== History of Exercise =======================\n");
@@ -81,8 +82,31 @@ void printHealthData(const HealthData* health_data) {
     printf("=======================================================================\n \n");
     
 	
-	// ToCode: to print out the recommendtaion depending on the current total calories burned and intake    
+	// ToCode: to print out the recommendtaion depending on the current total calories burned and intake
+	if (left_cal==0)
+	{
+		printf("You have counsumed all your calories for today!\n");
+		break;			
+	    }
+	else if (left_cal<0)
+	{
+		printf("[Warning] Too few calories!\n");
+		if (eat_cal==day_cal)
+		    printf("Your total calorite intake for today has reached your goal!\n");
+		else if (eat cal<day_cal)
+		    printf("Your total calorie intake for today has not reached your goal, remember to eat more!\n");
+		else 
+		    printf("You have eaten more calories than planned today, but you have exercised too much!\n");
+		}
+	else
+	{
+		printf("Please exercise for your health!\n");
+		if (eat_cal>=day_cal)
+		    printf("Your total calorie intake for today has reached your goal!\n");
+		else   
+		    printf("Your total calorie intake for today has not reached your goal, remember to eat more!\n");
+    	}
+	}    
     
-    
-	 printf("=======================================================================\n");
+     printf("=======================================================================\n");
 }
