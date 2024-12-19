@@ -35,7 +35,7 @@ int main() {
     
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
     do {
-    	if ( ){
+    	if (health_data.total_calories_intake-(health_data.total_calories_burned+1300)<=0 ){
             printf("You have consumed all your calories for today! \n");
 		} 
 		else{
