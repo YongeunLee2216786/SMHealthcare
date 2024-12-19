@@ -28,6 +28,10 @@ int main() {
     fp=fopen("diets.txt", "w");
     fp=fopen("exercises.txt", "w");
     
+    loadDiets(DIETFILEPATH);
+    loadExercises(EXERCISEFILEPATH);
+    
+    fclose(fp);
     
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
     do {
@@ -49,15 +53,15 @@ int main() {
 		// ToCode: to run the sysmtem based on the user's choice
         switch (choice) {
             case 1:
-            	
+            	inputExercise(&health_data);
                 break;
                 
             case 2:
-            	
+            	inputDiet(&health_data);
                 break;
                 
             case 3:
-            	
+            	printHealthdata(&health_data);
                 break;
                 
             case 4:
@@ -70,7 +74,7 @@ int main() {
                 printf("[Error] Invalid option. \n");
                 printf("Please try again! \n");
         }
-    } while ( left_cal==0 );
+    } while (choice!=4);
 
     return 0;
 }
