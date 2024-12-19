@@ -22,7 +22,8 @@
 // excercise definition for linked list
 typedef struct {
     char exercise_name[MAX_EXERCISE_NAME_LEN];	// the name of the exercise
-    int calories_burned_per_minute;   			// calory burned per minute
+    int calories_burned_per_minute;      		// calory burned per minute
+    int duration;
 } Exercise;
 
 // diet definition for linked list
